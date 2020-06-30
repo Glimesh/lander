@@ -36,6 +36,13 @@ func submit(w http.ResponseWriter, r *http.Request) {
 
 	email := r.FormValue("email")
 	username := r.FormValue("username")
+	if email == "" || username == "" {
+		c := &http.Cookie{Name: "form-submit", Value: "notok"}
+		http.SetCookie(w, c)
+
+		http.Redirect(w, r, "/", http.StatusTemporaryRedirect)
+		return
+	}
 
 	if _, err := file.WriteString(fmt.Sprintf("%s,%s\n", email, username)); err != nil {
 		log.Println(err)
