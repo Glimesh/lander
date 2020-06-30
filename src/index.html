@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Codename: Recode - ¡Viva la Revolución!</title>
+    <link rel="stylesheet" href="bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <style>
+
+        html, body {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .hero.is-info {
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+            ), url('29443236662_7a5fd825d0_k.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .hero .nav, .hero.is-success .nav {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        .hero .subtitle {
+            padding: 3rem 0;
+            line-height: 1.5;
+        }
+
+        .hero {
+            margin-bottom: 50px;
+        }
+
+        .narrow-container {
+            max-width: 600px;
+        }
+
+        .social-icons {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<section class="hero is-info is-fullheight">
+
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="column is-6 is-offset-3">
+                <h1 class="title">
+                    Community-owned Streaming
+                </h1>
+                <h2 class="subtitle">
+                    People first streaming, with discoverability as a primary feature. Let's build the next generation of streaming.
+                </h2>
+                <div class="box">
+                    <div class="content">
+                        <h3>Subscribe for Updates</h3>
+                        <p>By clicking Keep Me Updated you agree you have read and agree to the privacy policy
+                            below.</p>
+                    </div>
+                    <div id="success" class="notification is-success" style="display: none">
+                        You are subscribed!
+                    </div>
+                    <div id="error" class="notification is-danger" style="display: none">
+                        There was a problem validating your request.
+                    </div>
+                    <form id="subscribe-form" action="/submit" method="post">
+                        <div class="field">
+                            <label class="label" for="email">Your Email</label>
+                            <div class="control">
+                                <input class="input is-large" type="email" id="email" name="email"
+                                       placeholder="user@example.com" required/>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label" for="username">Claim your username</label>
+                            <div class="control">
+                                <input class="input is-large" type="text" id="username" name="username"
+                                       placeholder="foodbar" required/>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <button type="submit" class="button is-info g-recaptcha"
+                                    data-sitekey="6LdFfqsZAAAAAF70KSde6nXm_-a1EtrzeelJtBhn"
+                                    data-callback="submitForm"
+                                    data-action="submit">
+                                Keep Me Updated
+                            </button>
+                        </div>
+                        <div class="content">
+                            <p>(more options to keep up to date below)</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div class="container narrow-container">
+    <div class="content">
+        <div class="columns is-centered">
+            <div class="column is-4">
+                <a href="https://discord.gg/RK7xq9A" target="_blank">
+                    <figure class="image is-96x96">
+                        <img src="Discord-Logo-Color.png"
+                             alt="Chat with us on Discord">
+                    </figure>
+                </a>
+            </div>
+            <div class="column is-4">
+                <a href="https://twitter.com/codenamerecode" target="_blank">
+                    <figure class="image is-96x96">
+                        <img src="Twitter_Logo_Blue.png"
+                             alt="Follow us on Twitter">
+                    </figure>
+                </a>
+            </div>
+        </div>
+
+        <h2>F.A.Q</h2>
+        <h3>What's Codename: Recode?</h3>
+        <p>Recode is the placeholder name of a live streaming platform focused on discoverability &
+            community. Our mission is to build a platform where everyone can have the chance to flourish.</p>
+
+        <h3>Why make this project?</h3>
+        <p>The core inspiration of this project has been equality. There are two main problems with existing streaming
+            websites: they take too much of a cut and the gap between streamers is great. Recode is our chance to make
+            this right, and build a platform that puts the streamers & community first, not the advertisers.</p>
+
+        <h3>What makes Codename: Recode unique?</h3>
+        <p>Recode is built by the community, for the community. We are an <a href="https://www.opencompany.org/"
+                                                                             target="_blank">Open Company</a>
+            dedicated to putting true transparency and openness first. Come see for yourself by joining our Discord!</p>
+
+        <h3>When will it be ready?</h3>
+        <p>Let's be realistic, there's a lot to tackle. Design, development, infrastructure and business are all
+            key areas we need to build out. However the idea is to tackle it in an MVP approach to get value to
+            you as soon as possible and then iterate.</p>
+
+        <h3>How can I help?</h3>
+        <p>Easy! Join us in Discord and look for the #volunteers channel and let us know what you can do.</p>
+
+        <hr>
+
+        <h2>Privacy Policy</h2>
+        <p>This Privacy Policy explains how your personal information is
+            collected, used and disclosed by Codename: Recode and its subsidiaries and
+            affiliated companies ("Recode"). This Privacy Policy applies to the websites of
+            Recode, including <a href="https://codenamerecode.com/">https://codenamerecode.com/</a> ("Sites")
+            and Recode's other products, services or any other features, technologies or
+            functionalities offered by us on our Sites or through any other means
+            (collectively, "Services"). This Privacy Policy does not apply to information you
+            provide directly to third party websites or third party applications that use
+            Recode's Services. We do not control the activities of such third parties
+            and advise you to consult their privacy policies before you share your personal
+            information.</p>
+
+
+        <h4>Personal Information Collected</h4>
+
+        <p>We collect information about you in various ways when you use our Sites and
+            Services. Such personal information may include your name, address, email
+            address and credit card information. Finally, we may obtain information
+            about you from other sources, including third party websites or applications
+            that offer the Recode Services, and combine that with information we collect
+            on our Sites and through our Services.</p>
+
+        <p>When you visit our Sites or use our Services, some information is
+            automatically collected. For example, when you visit our Sites, your computer's
+            operating system, Internet Protocol ("IP") address, access times, browser type
+            and language and the website you visited before our Sites are logged
+            automatically. We also collect information about your usage and activity on our
+            Sites and Services.</p>
+
+        <p><b>Cookies.</b> We automatically collect information using "cookies."
+            Cookies are small data files stored on your hard drive by a website. Among
+            other things, cookies help us improve our Sites, Services and your experience.
+            We use cookies to collect data from our email form above. You can usually choose to set your browser to
+            remove and/or reject cookies. If you choose to remove or reject cookies,
+            this could affect certain features or services of our Sites or Services. For example,
+            you will not know that you have successfully submitted the form.</p>
+
+        <p>Example cookie usage:</p>
+        <ul>
+            <li>Recaptcha - proving you are not a robot</li>
+            <li>Subscription Form - giving you a nice success or error message</li>
+        </ul>
+
+        <p><b>Web Beacons.</b> We may also collect information using Web beacons. Web
+            beacons are electronic images that may be used on our Sites, in our Services or
+            in our emails. We use Web beacons to deliver cookies, count visits, understand
+            usage and campaign effectiveness and to tell if an email has been opened and
+            acted upon.</p>
+
+        <h4>Use of Personal Information We Collect</h4>
+
+        <p>We use personal information collected through our Sites and Services for
+            purposes described in this Policy or otherwise disclosed to you. For example,
+            we may use personal information to:</p>
+
+        <ul>
+            <li>operate and improve our Sites and Services;</li>
+            <li>respond to your comments and questions and provide customer service;</li>
+            <li>process transactions and send you related information,
+                including confirmations, receipts, invoices, technical notices, updates,
+                security alerts and support and administrative messages;
+            </li>
+        </ul>
+
+        <p>Recode stores and processes personal information in the United States.</p>
+
+        <h4>Sharing of Personal Information</h4>
+
+        <p>We may also share your personal information with these third party vendors
+            who work on our behalf:</p>
+
+        <ul>
+
+            <li><a href="https://www.google.com/recaptcha/intro/v3.html">reCAPTCHA</a>
+                anti-robot service for preventing spam.
+            </li>
+
+        </ul>
+
+        <p>We may also share your information as follows:</p>
+
+        <ul>
+
+            <li>to comply with laws or to respond to lawful requests and legal process;
+                to protect the rights and property of Recode, our agents, users and others,
+                including to enforce our terms, policies and guidelines; or in an emergency
+                to protect the personal safety of our users or any other person;
+            </li>
+
+            <li>in connection with any merger, sale of company assets, financing or
+                acquisition of all or a portion of our business to another company;
+                and
+            </li>
+
+            <li>with your consent or direction to do so.</li>
+
+        </ul>
+
+
+        <h4>Security of Your Personal Information</h4>
+
+        <p>Recode takes measures to help protect your personal information in an effort
+            to prevent loss, misuse and unauthorized access, disclosure, alteration and
+            destruction.</p>
+
+
+        <h4>Changes to This Policy</h4>
+
+        <p>Recode may change this Policy from time to time. If we make any changes to
+            the Policy, we will update this webpage.</p>
+
+
+        <h4>Questions</h4>
+
+        <p>If you have any questions about this Policy, please contact us at
+            codenamerecode@axxim.net.</p>
+
+        <h3>Credits</h3>
+        <ul>
+            <li>
+                <a href="https://www.flickr.com/photos/mseeley1/29443236662/in/photolist-LRNhtq-2iVoQe1-oeo6Tu-ab1kba-rzpin-dUTdr-c4BB4f-MAjMDH-feLm4w-cBdx5W-dH1c8N-4Yun77-4YumZm-JDAH39-fWFARy-2cbC3ek-NgaVzv-Dxi2PZ-kwW6fT-L7cCai-HEMUZL-294hZQW-nX4Nu8-LaXYDh-LRNkM9-Qqy2-2yc1xN-5SLLS9-2fBq2S-hS3Tg-c4pUim-2fBra5-2fwYm8-azVF7W-a8ztFB-c4p47s-6FoS5z-427MKU-6v4g4K-qYfepV-2j3QaLP-294cFwC-LiVxYz-KJUuz-2jaWWHu-Fd6XkA-av1gT2-2j3RzHq-EjVNNm-o4T16c">OSIRIS-REx
+                    Launch Photograph by Michael Seeley</a></li>
+            <li>
+                <a href="https://bulma.io/">Bulma CSS Framework</a></li>
+            <li>
+                <a href="https://github.com/gorilla/mux">Go Mux Router</a></li>
+        </ul>
+
+        <p>Made with ❤ in Pittsburgh, PA</p>
+    </div>
+</div>
+
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+    function submitForm() {
+        document.getElementById("subscribe-form").submit();
+    }
+
+    (function () {
+        var submitted = getCookie('form-submit');
+        if (submitted === "ok") {
+            document.getElementById('success').style.display = "block";
+        } else if (submitted === "notok") {
+            document.getElementById('error').style.display = "block";
+        }
+        document.cookie = 'form-submit=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+
+        // https://stackoverflow.com/questions/10730362/get-cookie-by-name
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+    })();
+</script>
+
+</body>
+</html>
